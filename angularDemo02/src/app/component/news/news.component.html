@@ -1,0 +1,66 @@
+<h1>Angular绑定数据</h1>
+<hr>
+    <p>{{title}}</p>
+    <h1>{{student.userName}}</h1>
+    <div>
+        {{message}}
+    </div>
+<br>
+<br>
+
+<h1>Angular绑定属性</h1>
+<hr>
+    <div title="i am a div">
+    mouse on and take a look
+    </div>
+    <div [title]="msg">
+        Jagger
+    </div>
+<br>
+<br>
+
+<h1>Angular绑定html</h1>
+<hr>
+    <div>
+        {{content}}
+    </div>
+    <div [innerHtml] = "content">
+    </div>
+<br>
+<br>
+
+<h1>Angular中允许简单的运算</h1>
+<hr>
+    1+2 = {{1+2}}
+<br>
+<br>
+
+<h1>Angular中的数据循环</h1>
+<hr>
+<ul>
+    <li *ngFor="let item of arrDemo">
+        {{item}}
+    </li>
+</ul>
+<ul>
+    <li *ngFor="let item of arrDemo2">
+        我是第{{item}}个新闻
+    </li>
+</ul>
+<ul>
+    <li *ngFor="let item of userList">
+        我叫{{item.userName}}，我{{item.age}}岁了
+    </li>
+</ul>
+<ul>
+    <li *ngFor="let item of carList">
+        <h2>{{item.cate}}</h2>
+        <ol>
+            <li *ngFor=" let a of item.list">
+                {{a.title}}  -----  {{a.price}}
+            </li>
+        </ol>
+    </li>
+</ul>
+<br>
+<br>

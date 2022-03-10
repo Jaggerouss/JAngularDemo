@@ -1,0 +1,119 @@
+<h1>1.import picture</h1>
+<hr>
+
+<img [src]=picUrl alt="Baidu" style="width: 200px;">
+<br>
+<img src="assets/image/2.jpeg" alt="F1"  style="width: 400px;">
+
+<h1>2.循环数据 显示数据的索引</h1>
+<hr>
+<div>
+    <ul>
+        <li *ngFor="let item of list; let key = index" >
+            <span *ngIf="key==1" class="red">
+                {{key}} --- {{item.title}}  
+            </span>
+            <span *ngIf="key!=1" >
+                {{key}} --- {{item.title}}  
+            </span>
+        </li>
+    </ul>
+</div>
+
+<h1>3.条件判断语句 *ngIf</h1>
+<hr>
+<div *ngIf=flag>
+    <img src="assets/image/1.jpeg" alt="F1"  style="width: 400px;">
+</div>
+<div *ngIf=!flag>
+    <img src="assets/image/2.jpeg" alt="F1"  style="width: 400px;">
+</div>
+
+<h1>4.ngSwitch</h1>
+<hr>
+<span [ngSwitch]="orderStatus">
+    <p *ngSwitchCase="1">
+        已经支付
+    </p>
+    <p *ngSwitchCase="2">
+        已经支付并且确认订单
+    </p>
+    <p *ngSwitchCase="3">
+        已经发货
+    </p>
+    <p *ngSwitchCase="4">
+        已经收货
+    </p>
+    <p *ngSwitchDefault>
+        无效订单
+    </p>
+</span>
+
+<h1>5.[ngClass]</h1>
+<hr>
+<div class="orange">
+    display(尽量不要用dom改变)
+</div>
+<div [ngClass]="{'blue':'true'}">
+    dispaly2
+</div>
+<div [ngClass]="{'blue':flag,'orange':!flag}">
+    dispaly2
+</div>
+<strong>循环数组 让这个数组的第一个元素的class为orange;第二个元素为blue</strong>
+<ol>
+    <li *ngFor="let item of list;let key = index" [ngClass]="{'orange':key==0,'blue':key==1}">
+        {{key}} ---  {{item.title}}
+    </li>
+</ol>
+
+<h1>6.[ngStyle]</h1>
+<hr>
+<p style="color: orange;">I am a P tag</p>
+<p [ngStyle]="{'color': 'orange'}">I am a P2 tag</p>
+<p [ngStyle]="{'color': attr}">I am a P3 tag</p>
+
+<h1>*7.Pipe</h1>
+<hr>
+    <strong>1.大小写转化</strong>
+    <p>{{'a'|uppercase}}</p>
+    <p>{{'a'|lowercase}}</p>
+    <strong>2.日期格式转化</strong>s
+    <p>{{today| date:'yyyy-MMM-dd HH:mm:ss'}}</p>
+    <p>{{today| date:'yyyy/MMM/dd HH:mm:ss'}}</p>
+
+<h1>*8.Event</h1>
+<hr>
+    {{title}}
+    <br>
+    <button (click)='run()'> Run </button>
+    <br>
+    <button (click)='getDate()'> Run and catch the Value </button>
+    <br>
+    <button (click)='changeDate()'> Run and change the Value </button>
+    <br>
+    <button (click)='runEvent($event)'> Run and change css </button>
+    <br>
+
+<h1>*9.表单事件</h1>
+<hr>
+    <input type="text" (keydown)="keyDown()">
+    <br>
+    keyDown
+    <input type="text" (keydown)="keyDown($event)">
+    <br>
+    keyUp
+    <input type="text" (keyup)="keyUp($event)">
+
+
+<h1>*10.双向数据绑定 ---> MVVM  只针对表单</h1>
+    视图改变影响数据 数据改变影响视图。
+    <strong>1. import FormsModule from '@angular/forms' in AppModule.ts</strong>
+    <br>
+    <input type="text" [(ngModel)]='keywords'/>
+    {{keywords}}
+    <br>
+    <button (click)="changeKeyWords()">改变keyword的值</button>
+    <br>
+    <button (click)="getKeyWords()">获取keyword的值</button>
+<hr>
