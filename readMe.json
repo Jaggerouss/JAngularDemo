@@ -1,3 +1,15 @@
 {
-    "angualrDemo01":"basic info of angualr"
+    "angualrDemo01":"basic info of angualr",
+    "angualrDemo02":{
+        "1":"import picture",
+        "2":"循环数据 显示数据的索引",
+        "3":"条件判断语句 *ngIf",
+        "4":"ngSwitch",
+        "5":"[ngClass]",
+        "6":"[ngStyle]",
+        "7":"*Pipe",
+        "8":"*Event",
+        "9":"*表单事件",
+        "10":"*双向数据绑定 ---> MVVM 只针对表单"
+    }
 }
