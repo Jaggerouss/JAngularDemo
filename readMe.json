@@ -12,5 +12,6 @@
         "9":"*表单事件",
         "10":"*双向数据绑定 ---> MVVM 只针对表单"
     },
-    "angualrDemo03":"form -> input checkbox radio textarea"
+    "angualrDemo03":"form -> input checkbox radio textarea",
+    "angualrDemo04":"TSearch cache"
 }
