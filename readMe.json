@@ -13,5 +13,14 @@
         "10":"*双向数据绑定 ---> MVVM 只针对表单"
     },
     "angualrDemo03":"form -> input checkbox radio textarea",
-    "angualrDemo04":"TSearch cache"
+    "angualrDemo04":"Search cache",
+    "angualrDemo05":{
+        "Service":{
+            "1.":"ng g service services/anyService ->创建服务",
+            "2.":"import { StorageService } from '../../services/storage.service' -> 在app.module.ts里引入服务",
+            "3.":"在ngModule里面的providers里面依赖注入服务(声明)",
+            "4.":"import { StorageService } from '../../services/storage.service'  -> 在需要用到的组件里面引入服务",
+            "5.":"开始使用， 具体参照to-do-list.component.ts"
+        }
+    }
 }
