@@ -23,5 +23,6 @@
             "5.":"开始使用， 具体参照to-do-list.component.ts"
         }
     },
-    "angualrDemo06":"数据持久化，Storage"
+    "angualrDemo06":"数据持久化，Storage",
+    "angualrDemo07":"Angualr DOM's operation"
 }
