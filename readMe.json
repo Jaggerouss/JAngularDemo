@@ -22,5 +22,6 @@
             "4.":"import { StorageService } from '../../services/storage.service'  -> 在需要用到的组件里面引入服务",
             "5.":"开始使用， 具体参照to-do-list.component.ts"
         }
-    }
+    },
+    "angualrDemo06":"数据持久化，Storage"
 }
