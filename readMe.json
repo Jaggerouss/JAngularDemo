@@ -25,5 +25,6 @@
     },
     "angualrDemo06":"数据持久化，Storage",
     "angualrDemo07":"Angualr DOM's operation @ViewChild",
-    "angualrDemo08":"Angualr input output"
+    "angualrDemo08":"Angualr input output",
+    "angualrDemo09":"Angualr 生命周期函数"
 }
