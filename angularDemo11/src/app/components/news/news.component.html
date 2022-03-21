@@ -1,0 +1,26 @@
+<h1> Http Request Data</h1>
+
+<button (click)="getData()">get请求数据</button>
+
+<div *ngFor="let item of list">
+    {{item.title}}
+</div>
+
+
+<br>
+<hr>
+<br>
+
+<button (click)="doLogin()">post提交数据</button>
+
+<br>
+<hr>
+<br>
+
+<button (click)="getJsonpData()">通过jsonp获取服务器数据（跨域的一种解决方案）</button>
+
+<br>
+<hr>
+<br>
+
+<button (click)="getAxiosData()">通过第三方模块获取服务器数据（Axios）</button>

@@ -27,5 +27,8 @@
     "angualrDemo07":"Angualr DOM's operation @ViewChild",
     "angualrDemo08":"Angualr input output",
     "angualrDemo09":"Angualr 生命周期函数",
-    "angualrDemo10":"Angualr rxjs promise"
+    "angualrDemo10":"Angualr rxjs promise",
+    "angualrDemo11":"Angualr get post jsonp/Axios",
+    "angualrDemo12":"Angualr "
+
 }
