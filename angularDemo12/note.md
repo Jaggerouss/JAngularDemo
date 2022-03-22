@@ -30,5 +30,65 @@ const routes: Routes = [
 *routerLink 默认选中路由
 routerLinkActive="active"
 
+/*
+get传值
+1.跳转
+<ul>
+    <li *ngFor = "let item of list; let key = index;">
+        <a [routerLink]="[ '/newsContent' ]" [queryParams]="{aid:key+1}">{{key+1}}---{{item}}</a>
+    </li>
+</ul>
+
+2.接收
+import { ActivatedRoute } from '@angular/router';
+
+3.声明
+constructor(public router:ActivatedRoute) { }
+
+4.获取
+    this.router.queryParams.subscribe((data:any)=>{
+      console.log(data)
+    })
+*/
 
 
+/*
+二/ 动态路由
+
+1.配置动态路由
+  {
+    path:'newsContent/:aid',component:NewsContentComponent
+  },
+
+2.接收
+import { ActivatedRoute } from '@angular/router';
+
+3.声明
+constructor(public router:ActivatedRoute) { }
+
+4.获取
+    this.router.params.subscribe((data)=>{
+      console.log(data,'动态路由')
+    })
+*/
+
+/*
+三/Javascript实现页面跳转
+a)动态路由方法
+1.引入
+import { Router } from '@angular/router';
+2.初始化
+*/
+
+
+b)路由get传值js跳转
+1.引入 NavigationExtras
+import {Router,NavigationExtras} from '@angular/router'
+2.定义一个goNewsContent 方法执行跳转,用NavigationExtras配置传参
+  goNews(){
+    //跳转并进行get传值
+    let queryParams:NavigationExtras = {
+      queryParams:{'aid':123}
+    }
+    this.router.navigate(['/news'],queryParams)
+  }
