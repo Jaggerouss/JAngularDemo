@@ -1,1 +1,15 @@
-<iframe style="width: 100%;height: 500px;"  src="http://www.7k7k.com" frameborder="0"></iframe>
+<div class="content">
+
+    <div class="left">
+
+        <a [routerLink]="[ '/home/welcome' ]" routerLinkActive="active">欢迎</a>
+        <br>
+        <br>
+        <a [routerLink]="[ '/home/setting' ]" routerLinkActive="active">设置</a>
+    </div>
+
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

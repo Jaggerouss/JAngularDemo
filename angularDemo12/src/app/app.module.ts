@@ -8,6 +8,10 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductComponent } from './components/product/product.component';
 import { NewsContentComponent } from './components/news-content/news-content.component';
 import { ProductContentComponent } from './components/product-content/product-content.component';
+import { WelcomeComponent } from './components/home/welcome/welcome.component';
+import { SettingComponent } from './components/home/setting/setting.component';
+import { PcateComponent } from './components/product/pcate/pcate.component';
+import { PlistComponent } from './components/product/plist/plist.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ProductContentComponent } from './components/product-content/product-co
     HomeComponent,
     ProductComponent,
     NewsContentComponent,
-    ProductContentComponent
+    ProductContentComponent,
+    WelcomeComponent,
+    SettingComponent,
+    PcateComponent,
+    PlistComponent
   ],
   imports: [
     BrowserModule,

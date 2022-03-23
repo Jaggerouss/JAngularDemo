@@ -29,7 +29,6 @@ export class ProductComponent implements OnInit {
       queryParams:{'aid':123}
     }
     this.router.navigate(['/news'],queryParams)
-
   }
 
 }
