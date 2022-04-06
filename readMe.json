@@ -29,6 +29,7 @@
     "angualrDemo09":"Angualr 生命周期函数",
     "angualrDemo10":"Angualr rxjs promise",
     "angualrDemo11":"Angualr get post jsonp/Axios",
-    "angualrDemo12":"Angualr "
-
+    "angualrDemo12":"Angualr 路由",
+    "angualrDemo13":"点餐系统",
+    "angularDemo14":"Angualr 自建模块(module / export) 和 懒加载 模块内配置路由的两种方法"
 }
