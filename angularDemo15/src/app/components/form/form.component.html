@@ -1,0 +1,56 @@
+<div class="form_input">
+    <ul>
+        <li>
+            name: <input nz-input placeholder="plz input your name" [(ngModel)]="inputData.username">
+        </li>
+        <li>
+            age: <input nz-input placeholder="plz input your age" [(ngModel)]="inputData.age">
+        </li>
+        <li>
+            sex:
+            <nz-radio-group [(ngModel)]="inputData.sex">
+                <label nz-radio nzValue="male">male</label>
+                <label nz-radio nzValue="female">female</label>
+            </nz-radio-group>
+        </li>
+        <li>
+            hobby:
+            <nz-checkbox-group [(ngModel)]="inputData.hobby"></nz-checkbox-group>
+        </li>
+        <li>
+            grade:
+            <nz-select [(ngModel)]="inputData.grade" nzAllowClear nzPlaceHolder="Choose grade" nzShowSearch>
+                <nz-option nzValue="A" nzLabel="A"></nz-option>
+                <nz-option nzValue="B" nzLabel="B"></nz-option>
+                <nz-option nzValue="C" nzLabel="C"></nz-option>
+                <nz-option nzValue="D" nzLabel="D"></nz-option>
+            </nz-select>
+        </li>
+        <li>
+            data:
+            <nz-date-picker [(ngModel)]="inputData.date"></nz-date-picker>
+        </li>
+        <li>
+            upLoad:
+            <nz-upload
+            class="avatar-uploader"
+            nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+            nzName="avatar"
+            nzListType="picture-card"
+            [nzShowUploadList]="false"
+            [nzBeforeUpload]="beforeUpload"
+            (nzChange)="handleChange($event)"
+          >
+            <ng-container *ngIf="!avatarUrl">
+              <i class="upload-icon" nz-icon [nzType]="loading ? 'loading' : 'plus'"></i>
+              <div class="ant-upload-text">Upload</div>
+            </ng-container>
+            <img *ngIf="avatarUrl" [src]="avatarUrl" style="width: 100%" />
+          </nz-upload>
+        </li>
+    </ul>
+
+    <button nz-button [nzType]="'primary'" (click)="doSubmit()">
+        <span>submit</span>
+    </button>
+</div>
