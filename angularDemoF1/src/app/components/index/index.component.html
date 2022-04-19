@@ -1,0 +1,7 @@
+<nz-carousel nzAutoPlay>
+    <div nz-carousel-content *ngFor="let index of swiperList">
+        <img class="logo" [src]="index.flag" alt="contury_flag">
+        <h2 class="title">FORMULA 1 {{index.location|uppercase}} GRAND PRIX 2022</h2>
+        <h5 class= "race_time">{{index.startDate+index.month+''+2022|uppercase}}-{{index.endDate+index.month+''+2022|uppercase}} </h5>
+    </div>
+</nz-carousel>
